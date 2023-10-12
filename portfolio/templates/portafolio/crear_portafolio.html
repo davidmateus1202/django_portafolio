@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<style>
+    #floatingInput{
+        background: #000000;
+        color: #fff;
+    }
+    #floatingTextarea2{
+        background: #000000;
+        color: #fff;
+    }
+    #formFileMultiple{
+        background: #000000;
+    }
+</style>
+
+<div class="form-floating mb-3">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p}}
+    <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+
+
+
+{% endblock %}
